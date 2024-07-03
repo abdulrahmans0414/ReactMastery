@@ -1,11 +1,19 @@
+import Abdul from "./Abdul"
 
 
 function App() {
 
   return (
-    <h1>
-    Vit with Abdul
+
+    // fragement 
+    <>
+        <h1>
+    learn Vite with Abdul
     </h1>
+
+   < Abdul />
+    </>
+
   )
 }
 

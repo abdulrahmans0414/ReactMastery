@@ -1,10 +1,12 @@
+import Abdul from "./Abdul";
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <h1>
-        React with Abdul
+        Learn React with Abdul
       </h1>
+      <Abdul />
     </div>
   );
 }
