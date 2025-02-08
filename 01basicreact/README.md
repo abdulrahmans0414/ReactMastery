@@ -16,7 +16,7 @@ If Node.js is installed correctly, it will return a version number.
 
 ## 2. Install a Code Editor
 
-You can use any code editor. **VS Code** is a popular choice. Download it from [VS Code Official Site](https://code.visualstudio.com/).
+Use any editor like **VS Code** ([Download](https://code.visualstudio.com/)).
 
 ## 3. Create a Project Folder
 
@@ -81,8 +81,22 @@ After installing Node.js, you also get **npm (Node Package Manager)** and **npx 
 To create a new React app, run:
 
 ```sh
-npx create-react-app my-app
+npx create-react-app 01_basicreact
 ```
+
+Navigate into the project folder:
+
+```sh
+cd 01_basicreact
+```
+
+Start the development server:
+
+```sh
+npm start
+```
+
+This will open **http://localhost:3000/** in your browser.
 
 - `npx` executes packages without installing them globally.
 - `create-react-app` sets up a basic React project.
@@ -93,13 +107,22 @@ npx create-react-app my-app
 - It's slightly bulky and slow.
 - Modern alternatives like **Vite** offer faster builds.
 
-## 7. Start the React Project
+## 6. Alternative to Create-React-App
 
-Once the project is created, navigate into the directory and start the development server:
+Instead of `create-react-app`, you can use:
 
-```sh
-cd my-app
-npm start
-```
+- **Vite**: Faster builds and better performance.
+- **Parcel**: Lightweight bundler with zero config.
+- **Next.js, Gatsby, Remix**: Frameworks with advanced features like routing.
 
-This will open **http://localhost:3000/** in your browser.
+## 7. Understanding the Setup
+
+When using `create-react-app`, it automatically installs dependencies and configures a starter project. The main files include:
+
+- `package.json`: Manages project dependencies.
+- `src/`: Contains the source code (React components, styles, etc.).
+- `public/`: Contains static assets and the main HTML file.
+
+## 8. Project Performance and Setup Time
+
+Even on high-performance machines, setting up a React project with `create-react-app` can take time due to dependency installation. Alternative bundlers like **Vite** offer significantly faster project setup.
