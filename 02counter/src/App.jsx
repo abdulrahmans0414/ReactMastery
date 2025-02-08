@@ -1,46 +1,35 @@
-import { useState } from 'react'
-
-import './App.css'
+import { useState } from "react";
 
 function App() {
-
-  // useState is responsible for changing the state
-  // change doesn't mean that update value but change ko propogate kia jata hain UI ke ander
-  // useState me default value kya dena chahten hain as true, false, '' , [], {} or anything
-//  useState se 2 chizen milti hain array ke formate me
-//  0 index pe counter and 1 index pe ek function hota hain usko setCounter
-// setCounter ek method hain jo controle karega counter varible ko
   const [counter, setCounter] = useState(0)
 
-  // let counter = 0;
-
-  const addValue = () => {
-    //counter += 1;
-    setCounter(counter+1)
-    //console.log("clicked", counter);
+  function addValue() {
+    // setCounter(counter + 1)
+    setCounter(prev => prev + 1); // Functional update for consistency
   }
 
-  const removeValue = () => {
-    //counter -= 1;
-    setCounter(counter-1)
-    //console.log("clicked", counter);
+  function removeValue() {
+    // setCounter(counter - 1)
+    setCounter(prev => Math.max(0, prev - 1)); // Prevent negative values
   }
 
   return (
-    <>
-      <h1>Hi, Abdul Rahman </h1>
-      <h2>counter value : {counter}</h2>
-
-      <button
-        onClick={addValue}
-      >increase value {counter}</button>
-
-      <br />
-      <button
-        onClick={removeValue}
-      >decrease value {counter}</button>
-    </>
-  )
+    <div className="app-container">
+      <h1>Hi, Abdul Rahman</h1>
+      <div className="counter-display">{counter}</div>
+      <div className="button-group">
+        <button onClick={addValue}>
+          Increase
+        </button>
+        <button
+          onClick={removeValue}
+          disabled={counter === 0} // Disable when 0
+        >
+          Decrease
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default App
