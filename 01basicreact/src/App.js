@@ -1,10 +1,11 @@
-import Abdul from "./Abdul";
+import Abdul from "./Abdul.";
+
 
 function App() {
   return (
-    <div >
+    <div style={{ textAlign: "center" }}>
       <h1>
-        Learn React with Abdul
+        To set up a React app from scratch.
       </h1>
       <Abdul />
     </div>

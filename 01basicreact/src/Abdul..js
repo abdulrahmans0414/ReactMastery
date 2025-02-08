@@ -1,11 +1,10 @@
 
-function Abdul(){
-    return(
-
-    <>
-    <h1>info</h1>
-    <p>Abdul is a software engineer</p>
-    </>
+function Abdul() {
+    return (
+        <div style={{ textAlign: "center" }}>
+            <h4>info</h4>
+            <p>Abdul Rahman is an innovative software engineer eager to explore AI, Ethical Hacking, and cutting-edge technologies.</p>
+        </div>
     )
 }
 
